@@ -1,0 +1,96 @@
+body{
+  background-color: rgb(53,53,53);
+}
+header{
+  color: #dddddd;
+  background-color: #102E38;
+  font-style: italic;
+  font-family: Century Gothic,Lato,Helvetica Neue,Helvetica,Arial;
+  font-size: 250%;
+  cursor: default;
+  padding: 1%;
+}
+.container{
+  border: 1px solid #888888;
+  margin: 30px;
+  padding-left: 25px;
+  background-color: #353535;
+  color:#dddddd;
+  outline: 5px solid #00394d;
+  outline-offset: 6px;
+}
+#bank{
+  position: absolute;
+  right: 12.5%;
+  margin-top: 3%;
+  width: 29%;
+  margin-right: 3%;
+  text-align:right;
+}
+select{
+  font-size: 150%;
+  border: 5px solid #353535;
+  width: 16%;
+  margin-top: 4%;
+}
+select:hover{
+  border: 5px solid #4dffff;
+}
+#change{
+  position: absolute;
+  right: 16%;
+}
+.prompt{
+  color: #aaaaaa;
+  font-size: 150%;
+  display: inline-block; 
+  font-family: Verdana, Sans serif;
+  cursor: default;
+  margin-left: 50px;
+}
+#money{
+  color: rgb(0,200,0);
+  font-size: 200%;
+  cursor: default;
+}
+#slider{
+  width: 20%;
+  display: inline-block;
+  margin-left: 5%;
+}
+#button{
+  margin-left: 50px;
+  float: left;
+  font-size: 200%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 155px;
+  height: 90px;
+  
+}
+.dice1{
+  height: 100%;
+}
+.dice2{
+  height: 100%;
+}
+.outline{ 
+  padding-bottom: 3%;
+  margin-top: 30px;
+  margin-right: 2%;
+  border: 1px solid rgb(53,53,53);
+}
+#amount{
+  font-size: 150%;
+  background-color: #353535; 
+  border:none; 
+  color: yellow;
+  display: inline;
+}
+#point{
+  float: left;
+  margin-top: 0;
+  margin-left: 40px;
+  font-size: 150%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
