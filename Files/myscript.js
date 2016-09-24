@@ -125,17 +125,18 @@
     init();
       
     button.click(function(e){  
-      if(sel.val() !== "null"){
-        if(bet !== 0){
-          if(bank > 0 && done) 
+      if(bank > 0 && done){
+        if(sel.val() !== "null"){
+          if(bet !== 0){
             roll();
-          done = false;
+            done = false;
+          }else{
+            alert("Please choose an amount!");
+          }
         }else{
-          alert("Please choose an amount!");
-        }
-      }else if (point === 0){
-        alert("Please choose a bet type!");
-      }  
+          alert("Please choose a bet type!");
+        }         
+      }      
     });
     
     sel.change(function(e){
