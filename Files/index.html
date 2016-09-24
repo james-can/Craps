@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Craps</title> 
+  <meta charset="UTF-8"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css" type="text/css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>  
+  <script src="myscript.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+  <header >
+    Craps
+    <img src="http://gdurl.com/WoFp" style="height:30px"/>
+    <img src="http://gdurl.com/9Hf7" style="height:30px"/>
+  </header>
+ 
+  
+  <hr style="border: 1px solid #888888;"/>
+  
+  <div class="container" style="height:800px"> 
+    <div class="outline">      
+      <p id="bank"><span class="prompt" style="margin-left: -4%; display:inline;">Bank: &nbsp;</span><span id="money">$ 500</span></p>   
+      <p class="prompt" style="margin-top:2.5%;margin-right: 10%">Type of bet?</p>
+      <select>     
+        <option value="null">Select one</option> 
+        <option value="pass">Pass Line</option>
+        <option value="dont">Don't Pass Line</option>
+      </select>   
+      <br/>  
+      <p class="prompt">Choose an amount:  </p>
+      <div id="slider"></div>    
+      <p id="amount" class="prompt" style="margin-left:2%;float:right%">$ 0</p>   
+      <p id="change" class="prompt" style="margin-left:0">$ 0</p>
+        </div>   
+    
+    <button id="button" style="">Roll</button>  
+    
+    
+    <span style="float:left; display: inline-block;height: 120px;margin-right:25px;margin-top: 20px;margin-left: 100px">   
+      <img class="dice1" src="http://gdurl.com/Cz-L"/>
+      <img class="dice1" src="http://gdurl.com/JD4U"/>
+      <img class="dice1" src="http://gdurl.com/WoFp"/>
+      <img class="dice1" src="http://gdurl.com/9Hf7"/>
+      <img class="dice1" src="http://gdurl.com/eS0r"/>
+      <img class="dice1" src="http://gdurl.com/dvlP"/>
+    </span>
+    
+    <span style="float:left;height: 120px;margin-top: 20px">   
+      <img class="dice2" src="http://gdurl.com/Cz-L"/>
+      <img class="dice2" src="http://gdurl.com/JD4U"/>
+      <img class="dice2" src="http://gdurl.com/WoFp"/>
+      <img class="dice2" src="http://gdurl.com/9Hf7"/>
+      <img class="dice2" src="http://gdurl.com/eS0r"/>
+      <img class="dice2" src="http://gdurl.com/dvlP"/>
+    </span>
+    <p id="point">Point:&nbsp;</p>
+    
+     
+    <div id="result"></div>
+  </div>
+</body>
+</html>
