@@ -1,4 +1,4 @@
-  $(function() {
+$(function() {
     
     var r1, r2, hideD$,
         d$ = $("#change"),
@@ -6,6 +6,7 @@
         d1 = $(".dice1"),
         d2 = $(".dice2"),
         button = $("button"),
+        sel = $("select"),
 	bank = 500,
         type = "",
         bet = 0,
@@ -100,7 +101,7 @@
         
         resetBet = function(){    
           bet = 0; 
-          $("select").val("null");               
+          sel.val("null");               
           $("#slider").slider({value : 0});              
           $("#amount").html("$ 0");
         },
@@ -124,31 +125,40 @@
     init();
       
     button.click(function(e){  
-      if($("select").val() !== "null"){
-        if(bank > 0 && done) 
-          roll();
-        done = false;
-      }else if (point === 0){
-        alert("Please choose a bet type!");
-      }  
+      if(bank > 0 && done){
+        if(sel.val() !== "null"){
+          if(bet !== 0){
+            roll();
+            done = false;
+          }else{
+            alert("Please choose an amount!");
+          }
+        }else{
+          alert("Please choose a bet type!");
+        }         
+      }      
     });
     
-    $("select").change(function(e){
-      if (point === 0)
+    sel.change(function(e){
+      if (point === 0){
         type = e.target.value;
-      else if(e.target.value !== "null")
+      }else{
+        sel.val(type);
         alert("Bet locked in!");
-      
+      }
     });
     
     $("#slider").slider({
       min: 0,
       max: 500,   
       value:0,
-      slide: function( e, ui ) {
-        $("#amount").html("$ " + ui.value); 
-        if(point === 0)bet = ui.value;
-        else alert("Bet locked in!");
+      slide: function( e, ui ) { 
+        if(point === 0){
+          $("#amount").html("$ " + ui.value);
+          bet = ui.value;
+        }else{    
+          alert("Bet locked in!");
+        }
       }
     });
     
